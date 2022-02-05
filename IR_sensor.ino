@@ -12,12 +12,12 @@ void loop() {
   hasObstacle = digitalRead(obstaclePin);
 
   if (hasObstacle == HIGH) {
-    Serial.println("Stop something is ahead!!");
-    digitalWrite(LEDpin, HIGH);
-  }
-  else {
     Serial.println("Path is clear");
     digitalWrite(LEDpin, LOW);
+  }
+  else {
+    Serial.println("Stop something is ahead!!");
+    digitalWrite(LEDpin,HIGH);
   }
   delay(200);
 }
